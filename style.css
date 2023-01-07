@@ -1,0 +1,82 @@
+body {
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+p{
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* style the input field and button */
+input[type="text"] {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+/* style the tasks container and task elements */
+#tasks {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.task-text{
+  padding-right: 10px;
+}
+
+/* style the checkbox and delete button */
+.task-checkbox,
+button {
+  margin-right: 0.5rem;
+}
+
+button {
+  padding: 0.25rem 0.5rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c82333;
+}
+
+.task-checkbox:checked + .task-text {
+  text-decoration: line-through;
+}
+
+
