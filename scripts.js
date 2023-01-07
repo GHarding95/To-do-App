@@ -10,8 +10,16 @@
     // get the value of the task input field
     const task = document.getElementById('task').value;
 
-    // check if the task is not empty and the tasks container has fewer than 10 children
-    if (task && tasksContainer.children.length < 11) {
+    if (!task) {
+      // display an error message if the task is empty
+      alert('Error: Please enter a task.');
+    } else if (tasksContainer.children.length >= 10) {
+      // display an error message if the tasks container has 10 or more children
+      alert('Error: The list is full. Please delete a task before adding a new one.');
+    } else if (task.length >= 100) {
+      // display an error message if the task has more than 100 characters
+      alert('Error: Please enter a task that is less than 100 characters.');
+    } else {
       // create a new div element for the task
       const taskDiv = document.createElement('div');
       taskDiv.classList.add('task');
@@ -51,5 +59,4 @@
       // clear the task input field
       document.getElementById('task').value = '';
     }
-
   });
